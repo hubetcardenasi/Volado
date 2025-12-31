@@ -5,34 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portafolio profesional - Desarrollo de bases de datos y sistemas de software">
     <title>Portafolio Profesional | HCI</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="web/assets/favicon.ico">
+    <link rel="stylesheet" href="web/css/style.css">
+    <link rel="stylesheet" href="web/css/style-popup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-    .popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .popup-content {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        text-align: center;
-    }
-    </style>
-
-
 </head>
 <body>
     <main>
@@ -49,7 +27,7 @@
                                 </svg>
                             </div>
                             <div class="project-links">
-                                <a href="https://hubetcardenasi.github.io/Volado/index.html" target="_blank" title="Ver Proyecto" class="project-link">
+                                <a href="#" onclick="mostrarPopup(); return false;" target="_blank" title="Ver Proyecto" class="project-link">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                                         <circle cx="12" cy="12" r="3"/>
@@ -108,13 +86,15 @@
         </div>
     </footer>
 
-    <div class="popup" id="popup" style="display:none;">
-        <div class="popup-content">
-            <img src="assets/volado_animacion.gif" alt="Animación de aplicación Volado" class="project-image" width="200">
-            <p>Procesando...</p>
-            <button onclick="cerrarPopup()">Cerrar</button>
-        </div>
+    <!-- Popup -->
+    <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+        <img src="web/assets/volado_animacion.gif" alt="Animación de aplicación Volado" class="project-image" width="180" style="border-radius: 12px;">
+        <p style="color:white; margin-top: 12px;">Procesando...</p>
+        <button class="popup-btn" onclick="cerrarPopup()">Cerrar</button>
     </div>
-    <script src="js/app.js"></script>
+    </div>
+
+    <script src="web/js/app.js"></script>
 </body>
 </html>
