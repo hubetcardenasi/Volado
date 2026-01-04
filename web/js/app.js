@@ -1,11 +1,3 @@
-function mostrarPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-
-function cerrarPopup() {
-    document.getElementById("popup").style.display = "none";
-}
-
 function getActualYear() {
     const date = new Date();
     return date.getFullYear();
